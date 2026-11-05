@@ -1,0 +1,8 @@
+gitlab.com/CoiaPrant/exec v0.0.0-20260419113308-c5fd8d150136 h1:UlD6Eby5sYdcjaIgDuC19daCHUlEHn9RO6pIShKLj2k=
+gitlab.com/CoiaPrant/exec v0.0.0-20260419113308-c5fd8d150136/go.mod h1:IgrQ9OCnIlgrwquq+Cyg8rLLF02SMOa7lbyQ4SfvInI=
+gitlab.com/CoiaPrant/exec v0.0.0-20261106175242-58ef006cbd24 h1:euE/DqjeLrogQGJHNsbhm5tSEXmqHZZZ38R7AD01OYs=
+gitlab.com/CoiaPrant/exec v0.0.0-20261106175242-58ef006cbd24/go.mod h1:IgrQ9OCnIlgrwquq+Cyg8rLLF02SMOa7lbyQ4SfvInI=
+gitlab.com/go-extension/rand v0.0.0-20240303103951-707937a049b5 h1:xQA0rfVPqW3G6dnb4qtgBdxr9XLu9vzDfdqKfLqGFXA=
+gitlab.com/go-extension/rand v0.0.0-20240303103951-707937a049b5/go.mod h1:nRmjyZOSF6N/6yuRl7ui9wKb1DjMX9ELGzOwELwWVSU=
+golang.org/x/sys v0.49.0 h1:XbzkgYJHdqh/8m2Uu0W/dQv8nktxx4BFHp1M0gROTXA=
+golang.org/x/sys v0.49.0/go.mod h1:hNLxWAXmnKAxqDtdwIYC4bM9oQPEecfsnNMuSxOs3og=
