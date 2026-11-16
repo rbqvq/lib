@@ -1,11 +1,21 @@
 package net
 
 import (
+	"context"
 	"net"
 	"net/netip"
 	"os"
 	"syscall"
 )
+
+type Dialer interface {
+	Dial(network, address string) (net.Conn, error)
+}
+
+type DialerContext interface {
+	Dialer
+	DialContext(ctx context.Context, network, address string) (net.Conn, error)
+}
 
 type UDPConn interface {
 	net.Conn
