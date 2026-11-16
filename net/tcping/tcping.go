@@ -3,12 +3,9 @@ package tcping
 import (
 	"net"
 	"time"
-)
 
-type Dialer interface {
-    // Dial connects to the given address via the proxy.
-    Dial(network, addr string) (c net.Conn, err error)
-}
+	libnet "gitlab.com/CoiaPrant/lib/net"
+)
 
 const defaultTimeout = 3 * time.Second
 
@@ -16,7 +13,7 @@ var defaultDialer = &net.Dialer{
 	Timeout: defaultTimeout,
 }
 
-func CheckWithDialer(dialer Dialer, raddr string) bool {
+func CheckWithDialer(dialer libnet.Dialer, raddr string) bool {
 	conn, err := dialer.Dial("tcp", raddr)
 	if err != nil {
 		return false
@@ -39,7 +36,7 @@ func Check(raddr string) bool {
 	return CheckWithDialer(defaultDialer, raddr)
 }
 
-func dialPing(dialer Dialer, raddr string) (net.Conn, time.Duration, error) {
+func dialPing(dialer libnet.Dialer, raddr string) (net.Conn, time.Duration, error) {
 	begin := time.Now()
 
 	conn, err := dialer.Dial("tcp", raddr)
@@ -47,7 +44,7 @@ func dialPing(dialer Dialer, raddr string) (net.Conn, time.Duration, error) {
 	return conn, elapsed, err
 }
 
-func PingWithDialer(dialer Dialer, raddr string) (time.Duration, error) {
+func PingWithDialer(dialer libnet.Dialer, raddr string) (time.Duration, error) {
 	conn, elapsed, err := dialPing(dialer, raddr)
 	if err != nil {
 		return 0, err
