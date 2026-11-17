@@ -3,9 +3,9 @@
 package ip_transparent
 
 import (
+	"errors"
 	"net"
 	"time"
-	"errors"
 )
 
 func DialTimeout(network string, laddr net.Addr, raddr string, timeout time.Duration) (net.Conn, error) {
