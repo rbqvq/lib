@@ -14,4 +14,7 @@ require (
 	golang.org/x/sys v0.50.0
 )
 
-require golang.org/x/crypto v0.58.0
+require (
+	github.com/puzpuzpuz/xsync/v4 v4.5.0
+	golang.org/x/crypto v0.58.0
+)
