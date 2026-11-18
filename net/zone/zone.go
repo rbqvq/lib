@@ -22,8 +22,8 @@ func Name(zone int) string {
 }
 
 func Index(zone string) int {
-	switch {
-	case zone == "":
+	switch zone {
+	case "":
 		return 0
 	default:
 		return zoneCache.index(zone)
