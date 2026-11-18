@@ -70,5 +70,9 @@ type (
 // If conn is not one of the supported connection types listed above for the
 // target platform, [NewPacketConn] returns [errors.ErrUnsupported].
 func NewPacketConn(conn net.PacketConn) (Conn, error) {
+	if batchConn, ok := conn.(Conn); ok {
+		return batchConn, nil
+	}
+
 	return newPacketConn(conn)
 }
