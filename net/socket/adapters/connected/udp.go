@@ -10,10 +10,10 @@ import (
 var _ libnet.UDPConn = (*UDPConn)(nil)
 
 type UDPConn struct {
-	*net.UDPConn
+	libnet.UDPConn
 }
 
-func NewUDPConn(conn *net.UDPConn) *UDPConn {
+func NewUDPConn(conn libnet.UDPConn) *UDPConn {
 	return &UDPConn{
 		UDPConn: conn,
 	}
